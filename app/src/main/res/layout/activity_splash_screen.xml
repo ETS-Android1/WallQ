@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:id="@+id/frame_1"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/gifview"
+        />
+
+
+
+
+
+
+    
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:gravity="center"
+       android:orientation="vertical"
+       >
+
+       <ImageView
+           android:layout_width="200dp"
+           android:layout_height="90dp"
+           android:id="@+id/logo"
+           android:background="@drawable/logo_"
+           android:layout_gravity="center"/>
+
+       <com.github.ybq.android.spinkit.SpinKitView
+
+           style="@style/SpinKitView.Wave"
+           android:id="@+id/spinkit_progress_bar"
+           android:layout_width="140dp"
+           android:layout_height="50dp"
+           android:layout_marginTop="1dp" />
+
+
+       
+   </LinearLayout>
+
+
+    
+<!---Parent Layout-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/splash_screen_hide"
+        android:orientation="vertical">
+
+
+        <!---Header_App_bar-->
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/header_AppBar"
+            android:layout_width="match_parent"
+            android:elevation="5dp"
+            android:background="#060310"
+            android:layout_height="45dp">
+
+
+
+            <TextView
+
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Wall Q"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                android:fontFamily="@font/fontleroybrownnf"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <com.denzcoskun.imageslider.ImageSlider
+                    android:id="@+id/image_slider"
+                    android:layout_below="@id/header_AppBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="240dp"
+                    app:iss_auto_cycle="true"
+                    app:iss_period="1000"
+
+                    app:iss_delay="0"/>
+
+                <androidx.coordinatorlayout.widget.CoordinatorLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/header_popular"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/image_slider">
+
+                    <TextView
+                        android:id="@+id/Popular_text"
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center"
+                        android:gravity="center|left"
+                        android:text="Popular"
+                        android:textColor="#ffffff"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/modecotrialbold"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"/>
+
+                    <TextView
+                        android:id="@+id/view_all_popular"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center"
+                        android:textSize="15sp"
+                        android:fontFamily="sans-serif"
+                        android:layout_gravity="right|center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/View_all"
+                        android:clickable="true"
+                        android:textColor="#ffffff"/>
+                </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+               
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_marginTop="3dp"
+                    android:layout_below="@id/header_popular"
+                    android:id="@+id/rcview"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_height="200dp"/>
+
+
+
+                <androidx.coordinatorlayout.widget.CoordinatorLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/image_slider">
+
+                    <TextView
+                        android:id="@+id/Trending_text"
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center"
+                        android:gravity="center|left"
+                        android:text="Trending"
+                        android:textColor="#ffffff"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/modecotrialbold"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"/>
+
+                    <TextView
+                        android:id="@+id/view_all_trending"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center"
+                        android:textSize="15sp"
+                        android:fontFamily="sans-serif-medium"
+                        android:layout_gravity="right|center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/View_all"
+                        android:clickable="true"
+                        android:textColor="#ffffff"/>
+                </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+                <com.denzcoskun.imageslider.ImageSlider
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:id="@+id/imageslider_trending"
+                    app:iss_auto_cycle="true"
+                    app:iss_period="1000"
+                    app:iss_selected_dot="@drawable/selected_dots"
+                    app:iss_unselected_dot="@drawable/unselected_dots"
+                    android:layout_marginBottom="70dp"
+                    />
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</RelativeLayout>

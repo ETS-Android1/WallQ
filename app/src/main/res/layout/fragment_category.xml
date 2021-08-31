@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/category_layout"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.Category.CategoryFragment">
+
+
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/category_appBar"
+            android:background="#060310"
+            android:layout_width="match_parent"
+            android:layout_height="56dp">
+
+                <Button
+                    android:id="@+id/reload"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center|right" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Category"
+                    android:fontFamily="@font/fredokaone_regular"
+                    android:textSize="25sp"
+                    android:textColor="#FFFFFF"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    />
+                <me.zhanghai.android.materialprogressbar.MaterialProgressBar
+                    android:layout_gravity="bottom|center"
+                    android:id="@+id/progress_bar"
+                    android:layout_width="match_parent"
+                    android:indeterminate="true"
+                    app:mpb_progressStyle="horizontal"
+                    style="@style/Widget.MaterialProgressBar.ProgressBar.Horizontal.NoPadding"
+                    android:layout_height="5dp"/>
+
+
+
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_below="@id/category_appBar"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_height="match_parent"
+
+            android:id="@+id/category_rcview"/>
+
+
+
+
+</RelativeLayout>

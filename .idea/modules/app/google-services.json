@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "854942984664",
+    "firebase_url": "https://fragmentwallpaper.firebaseio.com",
+    "project_id": "fragmentwallpaper",
+    "storage_bucket": "fragmentwallpaper.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:854942984664:android:11a5d9a1a6b2aa98072aad",
+        "android_client_info": {
+          "package_name": "com.example.fragment_wallpaper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "854942984664-0dsp7o0qa35cakd8nbb3vs6j3tghbbmi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.fragment_wallpaper",
+            "certificate_hash": "6fa3b84feff0722aeace389fdfb1eb95dabecde5"
+          }
+        },
+        {
+          "client_id": "854942984664-ge2u1lg7m6u7m4dltsc5t72cicdfobh6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkI0fJL3n8v8QR47rd4Wk9bGLzaBJCWEM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "854942984664-ge2u1lg7m6u7m4dltsc5t72cicdfobh6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
